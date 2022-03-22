@@ -4,13 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <link rel="icon" href="assets/fav2.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/fav.png" >
     <link rel="stylesheet" href="./styles/styles.css" />
     <script defer src="script.js"></script>
     <title>Design&Construction</title>
   </head>
-  <body>
+  <body>      
+    <header id='navbar'>
+      <h2>Lorem Design & Construction</h2>
+    <nav  class="nav">
+        <div class="navbar">
+          <a href="projects.html">Projects</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About Us</a>
+          Call us at: (123) 456-7890
+        </div>
+      </nav>
+    </header>
     <div class="hero-container">
       <video muted autoplay preload="auto" class="video">
         <source src="assets/14.mp4" type="video/mp4" />
@@ -19,68 +32,80 @@
       <div class="hero-banner">
         <h1 tabindex="0">Lorem Design & Construction</h1>
         <h3>Reliable Concrete for Abstract Solutions</h3>
-        <button class="btn">Get a Quote Today</button>
+        <button onclick="document.getElementById('form').scrollIntoView()" class="btn">Get a Quote Today</button>
       </div>
     </div>
     <div class="body-container">
-      <nav class="nav">
-        <ul class="navbar">
-          <li>
-            <a class="navbar-brand" href="/">
-              <img src="assets/logoSmall.png" class="logo" />
-              <h2>Lorem Design & Construction</h2>
-            </a>
-          </li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About Us</a></li>
-        </ul>
-      </nav>
+
       <div class="spot"></div>
 
-      <div class="contact-container hei">
+      <div class="contact-container">
         <div class="contact-left">
           <h2 tabindex="0">Who We Are</h2>
           <p>
             Lorem Design&Construction inc. is your trusted construction company
             specializing in high-end custom residential and commercial
-            construction projects. With only 40 to 50 microcement companies
-            operating in the State of California, HURK offers a unique service
-            with utmost technique and know-how.​ Alongside General Contracting,
-            our specialty is mainly focused on:
-          </p>
-
-          <ul>
-            <li>Decorative Concrete</li>
-            <li>Concrete Wall and Fireplace Design</li>
-            <li>Flooring and Resurfacing</li>
-            <li>Staining, Coating, Epoxies and Urethane</li>
-            <li>Restoration, Sealing, Waterproofing</li>
-          </ul>
-
-          <p>
-            We specialized in Lime Base MICROCEMENT finishes which develop into
+            construction projects. We specialized in lime base finishes which develop into
             modern textures for the minimalist space. what is plaster art and
             microcement? Our treatment is based in Lime marble stucco & flexible
             polymers. We prepare our own formula to install on any superficial
             material. This formula is suitable for High traffic environments
-            like kitchens, restaurants, bathrooms, patios, and more. This
-            texture can be applied also in Tables and Counter tops it requires a
-            different preparation to install over ceramic tiles without making
-            any tile demolitions , if you have a kitchen we can Re skim coat
-            easily also without demolitions. Any color available .Contact us for
-            more info. ​ Deck with a touch of art. ​ we use the traditional
-            method used for hallways, decks, balconies, patios and stairs. what
-            is making different our installation from the traditional is that we
-            finish with a beautiful lime marble finish on top. making us the
-            only one in the us. using this euro technique.
+            like kitchens, restaurants, bathrooms, patios, and more. 
           </p>
+          <div class="services-container"> 
+            <h2>Services</h2>
+
+            <section id="accordion">
+
+              <div class="menu">
+                  <div class="header">
+                      <div class="title">General Contracting</div>
+                      <span class="acc-icon">+</span>
+                  </div>
+                  <div class="content">
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, voluptatibus.</p>
+                  </div>
+              </div>
+          
+              <div class="menu">
+                  <div class="header">
+                      <div class="title">Concrete Repair</div>
+                      <span class="acc-icon">+</span>
+                  </div>
+                  <div class="content">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, voluptatibus.</p>
+                  </div>
+              </div>
+          
+              <div class="menu">
+                  <div class="header">
+                      <div class="title">Concrete Design</div>
+                      <span class="acc-icon">+</span>
+                  </div>
+                  <div class="content">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, voluptatibus.</p>
+                  </div>
+              </div>
+
+              <div class="menu">
+                <div class="header">
+                    <div class="title">Restoration and Resurfacing</div>
+                    <span class="acc-icon">+</span>
+                </div>
+                <div class="content">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, voluptatibus.</p>
+                </div>
+            </div>
+          
+          </section>
+        </div>
+         
         </div>
 
-        <div class="contact-right">
+        <div class="contact-right" id="form">
+        
+          <form> 
           <h3 tabindex="0">Get A Free Quote</h3>
-          <p>One of our specialists will get in touch with you.</p>
-          <form>
             <label class="font-size" for="name" id="name">Name</label>
             <input
               type="text"
@@ -104,7 +129,7 @@
             />
 
             <div>
-              <label for="service" class="centered-label">Service</label>
+              <label for="service" class="services-label">SERVICE REQUEST</label>
               <span>
                 <input
                   type="checkbox"
@@ -112,7 +137,16 @@
                   id="GC"
                   value="General Contracting"
                 />
-                <label for="GC">General Contracting</label>
+                <label class="checkbox" for="GC">General Contracting</label>
+              </span>
+              <span>
+                <input
+                  type="checkbox"
+                  name="services"
+                  id="CR"
+                  value="Concrete Repair"
+                />
+                <label class="checkbox" for="CR">Concrete Repair</label>
               </span>
               <span>
                 <input
@@ -121,18 +155,7 @@
                   id="CD"
                   value="Concrete Design"
                 />
-                <label for="CD">Concrete Design</label>
-              </span>
-              <span>
-                <input
-                  type="checkbox"
-                  name="services"
-                  id="CSSW"
-                  value="Coating, Staining, Sealing, and Waterproofing"
-                />
-                <label for="CSSW"
-                  >Coating, Staining, Sealing, and Waterproofing</label
-                >
+                <label class="checkbox" for="CD">Concrete Design</label>
               </span>
               <span>
                 <input
@@ -141,17 +164,9 @@
                   id="flooring"
                   value="Flooring"
                 />
-                <label for="flooring">Flooring</label>
+                <label class="checkbox" for="flooring">Restoration and Resurfacing</label>
               </span>
-              <span>
-                <input
-                  type="checkbox"
-                  name="services"
-                  id="RR"
-                  value="Restorations and Resurfacing"
-                />
-                <label for="RR">Restorations and Resurfacing</label>
-              </span>
+             
             </div>
             <input type="submit" value="submit" />
           </form>
@@ -159,49 +174,40 @@
       </div>
 
       <div>
-      <h3 class="service-header">Services</h3>
-      <div class="services-container">
-        
-       
-    </div>
+     
+     
 
 
       <div class="cta-banner">
-        <h3>Contact Us</h3>
+        
         <div>
+          <h3>Contact Us</h3>
           <span>(123) 456-7890 </span>
           
           <span>email@email.com</span>
         </div>
       </div>
 
-      <div class="about-container hei">
+      <h2 class="gallery-title">Gallery</h2>
+      <div class="gallery">
+        <img src="/assets/pexels-pixabay-327482.jpg">
+        <img src="/assets/pexels-samuel-figueroa-2106249.jpg">
+        <img src="/assets/7.jpg">
+        <img src="/assets/9.jpg">
+        <img src="/assets/g1.jpg">
+        <img src="/assets/pexels-wewe-yang-4508641.jpg">
+        <img src="/assets/g2.jpg">
+        <img src="/assets/room.jpg">
+       
+      </div>
+
+      <div class="about-container">
         <div class="section">
           <h3 tabindex="0">Our Values</h3>
-          <ul>
-            <li>
-              Ethics: uncompromising integrity, honesty and fairness are at the
-              heart of our company.
-            </li>
-            <li>
-              Excellence: We set high standards. We apply advanced technology
-              and we continually innovate and improve. We thrive on challenge
-              and accomplishments.
-            </li>
-            Mutual Respect: We work by our  covenants, which encourages
-            openness, teamwork, and trust. We value an inclusive culture based
-            on diverse backgrounds, experiences, and views.
-            <li>Safety: Zero accidents is our unwavering goal.</li>
-
-            <li>
-              Sustainability: We plan and act for the future for the long-term
-              good of our company, our customers, and our world.
-            </li>
-          </ul>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora cumque, libero, doloribus repellendus tempore consectetur autem ducimus earum beatae ipsam perferendis reiciendis, commodi in cum facilis dolorum neque facere. Earum laudantium animi autem vero incidunt ipsam commodi doloremque necessitatibus ullam cum fugiat sit esse, natus atque qui omnis sequi asperiores.</p>
         </div>
         <div class="section">
           <h3 tabindex="0">Our Goals</h3>
-          ​
           <p>
             We strive to be the world's premier construction
             and project management company. Customers and partners will see us
@@ -212,6 +218,7 @@
             communities.
           </p>
         </div>
+        
       </div>
     </div>
 
