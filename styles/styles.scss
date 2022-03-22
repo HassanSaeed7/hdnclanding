@@ -99,6 +99,7 @@ nav {
   a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.75);
+    transition: all 0.25s ease;
     &:hover {
       color: rgba(255, 255, 255, 1);
     }
@@ -286,13 +287,16 @@ nav {
   border: none;
   background: red;
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 1% 2%;
   font-weight: bold;
-}
-.btn:hover {
+  font-size: 1.25rem;
+  transition: all 0.25s ease;
+  &:hover {
   cursor: pointer;
+  background: white;
+  color: black;
+  }
 }
-
 .scrollToTop {
   position: fixed;
   bottom: 3rem;
