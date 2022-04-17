@@ -455,7 +455,7 @@ nav {
   align-items: center;
   padding: 1%;
   line-height: 2;
-  font-size: 1.75rem;
+  font-size: clamp(1rem, 1.2vmin, 1.25rem);
   width: 80%;
 }
 
