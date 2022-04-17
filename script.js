@@ -1,6 +1,10 @@
 const scrollToTop = document.querySelector(".scrollToTop");
 const spot = document.querySelector(".spot");
 const nav = document.querySelector(".nav");
+const burger = document.getElementById("hamburger");
+const exitBtn = document.getElementById("exit-btn")
+const mobileNav = document.querySelector(".mobile-navlinks");
+const navlink = document.querySelectorAll(".mobile-link");
 const options = {
     root: null, 
     rootMargin: "0px", 
@@ -9,6 +13,21 @@ const options = {
 const headers = document.getElementsByClassName("header"),
       contents = document.getElementsByClassName("content"),
       icons = document.getElementsByClassName("acc-icon");
+
+
+
+burger.addEventListener("click", ()=> {
+  mobileNav.classList.toggle('idk')
+})
+exitBtn.addEventListener("click", ()=> {
+  mobileNav.classList.remove('idk')
+})
+
+for (let x = 0; x < navlink.length; x++) {
+  navlink[x].addEventListener("click", () => {
+    mobileNav.classList.remove('idk')
+  })
+}
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {

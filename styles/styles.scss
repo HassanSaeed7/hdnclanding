@@ -58,6 +58,9 @@ html {
   background: $background2;
   border-radius: 100vw;
 }
+a {
+  text-decoration: none;
+}
 body {
   margin: 0;
   padding: 0;
@@ -595,6 +598,7 @@ h4 {
 }
 .mobile-navlinks {
   display: none; 
+
   place-content: center;
   position: fixed;
   height: 100vh;
@@ -605,12 +609,49 @@ h4 {
   z-index: 1000;
 }
 .idk {
+  
   display: flex;
- 
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    width: fit-content;
+    gap: 2rem;
+    a {
+      width: fit-content;
+      color: white;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
+.exit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+}
+#hamburger {
+  width: 50px;
+  background: none;
+  border: none;
 
+}
 @media (max-width: 1440px) {
-
+  .cta-banner {
+    margin: 5% auto;
+    min-height: 30vh;
+    div {
+      min-height: 30vh;
+      place-content: center;
+    }
+  }
   .gallery {
     grid-template-columns: repeat(auto-fit, 300px);
     gap: 15px;
@@ -653,10 +694,11 @@ h4 {
   }
   .contact-container {
     flex-direction: column;
+    gap: 2rem;
   }
   .contact-right,
   .contact-left {
-    margin: 1% auto;
+    margin: 2.5% auto;
     width: 95%;
   }
   .section {

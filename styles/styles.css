@@ -29,6 +29,10 @@ html {
   border-radius: 100vw;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -633,8 +637,52 @@ nav {
 .idk {
   display: flex;
 }
+.idk nav {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 2rem;
+}
+.idk nav a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+}
+.idk nav a:hover {
+  text-decoration: underline;
+}
+
+.exit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+}
+
+#hamburger {
+  width: 50px;
+  background: none;
+  border: none;
+}
 
 @media (max-width: 1440px) {
+  .cta-banner {
+    margin: 5% auto;
+    min-height: 30vh;
+  }
+  .cta-banner div {
+    min-height: 30vh;
+    place-content: center;
+  }
+
   .gallery {
     grid-template-columns: repeat(auto-fit, 300px);
     gap: 15px;
@@ -679,11 +727,12 @@ nav {
 
   .contact-container {
     flex-direction: column;
+    gap: 2rem;
   }
 
   .contact-right,
 .contact-left {
-    margin: 1% auto;
+    margin: 2.5% auto;
     width: 95%;
   }
 
