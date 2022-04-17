@@ -12,18 +12,36 @@
     <script defer src="script.js"></script>
     <title>Design&Construction</title>
   </head>
-  <body>      
+  <body> 
+    <div id="mobile-navlinks" class="mobile-navlinks"> 
+      <nav>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact Us</a>
+          <p>Call us at: (123) 456-7890</p>
+    </nav>
+  </div>  
+
     <header id='navbar'>
       <h2>Lorem Design & Construction</h2>
     <nav  class="nav">
         <div class="navbar">
-          <a href="projects.html">Projects</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="about.html">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact Us</a>
           <p>Call us at: (123) 456-7890</p>
         </div>
       </nav>
-    </header>
+      <div class="mobile-nav">
+        <button onclick="document.getElementById('mobile-navlinks').classList.toggle('idk')">HAMBURGER</button>
+      
+      </div>
+      
+    </header> 
+    
+
+   
+  
     <div class="hero-container">
       <video muted autoplay preload="auto" class="video">
         <source src="assets/14.mp4" type="video/mp4" />
@@ -39,7 +57,7 @@
 
       <div class="spot"></div>
 
-      <div class="contact-container">
+      <div class="contact-container" id="services">
         <div class="contact-left">
           <h2 tabindex="0">Who We Are</h2>
           <p>
@@ -185,7 +203,7 @@
         </div>
       </div>
 
-      <h2 class="gallery-title">Gallery</h2>
+      <h2 id='gallery' class="gallery-title">Gallery</h2>
       <div class="gallery">
         <img src="assets/pexels-pixabay-327482.jpg">
         <img src="assets/pexels-samuel-figueroa-2106249.jpg">
@@ -219,7 +237,7 @@
       </div>
     </div>
 
-    <footer class="footer-container">
+    <footer class="footer-container" id="contact">
       <div class="footer-left-container">
         <div class="footer-column">
           <h4>Our Company</h4>
